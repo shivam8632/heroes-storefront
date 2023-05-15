@@ -1,0 +1,11 @@
+.refundpolicy {
+    width: 90%; 
+    margin: auto
+}
+
+@media only screen and (min-width: 992px) {
+    .refundpolicy {
+        width: 70%;
+        margin: auto;
+    }
+}

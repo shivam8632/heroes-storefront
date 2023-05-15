@@ -1,0 +1,240 @@
+.banner {
+    position: relative;
+    height: 160vh;
+    overflow: hidden;
+    .slider {
+      height: 160vh;
+      .slide.next, .slide.previous {
+        top: 0 !important;
+      }
+      .upper-images, .upper-image-2{
+        position: absolute;
+        z-index: 1;
+        top: 27%;
+        left: 0;
+        transition: 1s ease-in-out;
+        min-height: 160vh;
+        width: 100%;
+      }
+      .upper-images {
+        left: -1%;
+      }
+      .upper-images.img-on {
+        top: 27% !important;
+      }
+      .upper-image-2{
+        top: 70%;
+        transition: 1.5s ease-in-out;
+      }
+    }
+    a.previousButton {
+      display: none;
+    }
+
+    .mobile {
+      display: none;
+      height: 120vh;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      transition: 0.9s ease-out;
+      background-attachment: fixed;
+    }
+
+    .hidden {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    
+    .show {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    .mob-img {
+      .three,.four {
+        display: none;
+      }
+    }
+}
+  
+.banner-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+
+  .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+  }
+  .img.one {
+    background-attachment: fixed;  
+    background-repeat: no-repeat;
+  }
+}
+  
+.banner-image.active {
+  opacity: 1;
+  top: 0 !important;
+  transition: opacity 1s ease-in-out;
+  .upper-image-2 {
+    top: 27%;
+    transition: 1s ease-in-out;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .banner {
+    .slider {
+      .upper-images, .upper-image-2 {
+        background-size: 100% 73%;
+        -webkit-background-size: 100% 73%;
+        top: 27%;
+      }
+      .upper-images {
+        top: -36%;
+        background-size: 105% 73%;
+        -webkit-background-size: 105% 73%;
+      }
+    }
+  }
+  .banner-image {
+    .img {
+      background-size: cover;
+    }
+  }
+}
+
+@media only screen and (max-width: 1299px) {
+  .banner {
+    height: 160vh;
+    .slider {
+      height: 160vh;
+      .upper-images, .upper-image-2 {
+        background-size: 80% 60%;
+        -webkit-background-size: 80% 60%;
+        background-repeat: no-repeat;
+        height: 160vh;
+        top: 40%;
+        left: 9%;
+      }
+      .upper-image-2 {
+        left: 20%;
+      }
+      .upper-images {
+        top: -30%;
+      }
+      .banner-image {
+        .img.one {
+          height: 160vh;
+          background-size: 100% 99%;
+          -webkit-background-size: 100% 99%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .banner {
+    height: 120vh;
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: flex;
+    }
+    
+    // pointer-events: none;
+    .slider {
+      // height: 120vh;
+      // pointer-events: none;
+      // .upper-image-2 {
+      //   top: 70%;
+      // }
+      // .upper-images, .upper-image-2 {
+      //   background-size: 100% 55%;
+      //   -webkit-background-size: 100% 55%;
+      //   height: 120vh;
+      // }
+      // .banner-image.active {
+      //   .upper-image-2 {
+      //     top: 27%;
+      //   }
+      // }
+    }
+    .mob-img {
+      position: relative;
+      transition: 1s ease-in-out;
+      .three,.four {
+        display: flex;
+        position: absolute;
+        transition: 1s ease-in-out;
+      }
+      .three {
+        top: 50px;
+        right: -142px;
+        width: 151%;
+      }
+      .four {
+        bottom: 0px;
+        right: 0px;
+        width: 149%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .banner {
+    
+    .banner-image {
+      .img.one {
+        height: 120vh;
+        background-size: 100% 100%;
+        -webkit-background-size: 100% 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .banner {
+    .mobile {
+      background-size: 100% 100%;
+    }
+    .mobile.one {
+      background-image: url(../../../assets/img/Heroes-Main-1.jpg) !important;
+    }
+    .mobile.one.two {
+      background-image: url(../../../assets/img/Heroes-Main-2.jpg) !important;
+    }
+    .mob-img {
+      .three {
+        top: -31.1%;
+        width: 100%;
+        right: -29.4%;
+      }
+      .four {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen 
+  and (max-device-width: 445px) 
+  and (-webkit-device-pixel-ratio: 3) {
+    /* CSS rules for iPhone 6/7/8 Plus */
+    .banner {
+      height: 97vh;
+      .slider {
+        height: 97vh;
+      }
+    }
+}

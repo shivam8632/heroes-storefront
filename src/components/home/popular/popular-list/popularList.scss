@@ -1,0 +1,9 @@
+.popular-list {
+    // margin-top: 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .swiper-slide {
+        padding: 10px;
+    }
+}

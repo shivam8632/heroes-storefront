@@ -1,0 +1,521 @@
+.product-detail-container {
+    .detail-list {
+        .detail-item {
+            padding: 2rem;
+            .detail-img {
+                display: flex;
+                img {
+                    width: 100%;
+                    height: fit-content;
+                }
+            }
+            .carousel-inner img {
+                width: 100%;
+            }
+            .carousel-item {
+                border: 1px solid;
+                img {
+                    width: 100%;
+                    max-height: 440px !important;    
+                }
+            } 
+            #myCarousel {
+                position: unset;
+                .carousel-indicators {
+                    position: static;
+                    margin-top: 0px;
+                    padding: 0 4px; 
+                    margin: 0 5% !important;
+                    li {
+                        img {
+                            display: block;
+                            opacity: 0.5
+                        }
+                        &:hover {
+                            img {
+                                opacity: 0.75
+                            }
+                        }
+                    }
+                    li.active {
+                        opacity: 1
+                    }
+                    .active {
+                        a {
+                            opacity: 1;
+                        }
+                        img {
+                            border: 1px solid #5d5d5d !important;
+                            opacity: 0.85 !important;
+                        }
+                    }
+                }
+            }
+            #myCarousel .carousel-indicators>li {
+                width: 100px
+            }
+            .detail-content {
+                h3, p {
+                    text-align: left;
+                }
+                .buttons {
+                    .input-container {
+                        max-width: 150px;
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+                .collection {
+                    .content {
+                        background-color: transparent;
+                        width: fit-content;
+                    }
+                }
+            }
+        }
+
+
+        .star-rating {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        
+            .star {
+                cursor: pointer;
+                width: 1.7em;
+                height: 1.7em;
+                margin: 0 .4em;
+                background-color: grey;
+                -webkit-clip-path: polygon(
+                50% 0%,
+                63% 38%,
+                100% 38%,
+                69% 59%,
+                82% 100%,
+                50% 75%,
+                18% 100%,
+                31% 59%,
+                0% 38%,
+                37% 38%
+                );
+                clip-path: polygon(
+                50% 0%,
+                63% 38%,
+                100% 38%,
+                69% 59%,
+                82% 100%,
+                50% 75%,
+                18% 100%,
+                31% 59%,
+                0% 38%,
+                37% 38%
+                );
+        
+                &:nth-child(1) {
+                    margin-left: 0;
+                }
+        
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        
+            .star.selected {
+            background-color: #f26b3c;
+            }
+        
+            p {
+            width: 100%;
+            text-align: center;
+            }
+        }
+    }
+}
+
+.modal-body {
+    background:  #49a9a7;
+    padding: 0 !important;
+
+    // .calender-dates {
+        // width: calc(100% - 350px);
+        width: 100%;
+        margin: auto;
+        .slot-box {
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            cursor: pointer;
+            position: relative;
+            p {
+                text-align: center;
+            }
+
+            .slot-time {
+                margin-bottom: .5rem;
+                padding-top: 8px;
+                background: #fff;
+                border-radius: 40px;
+                padding: 1rem;
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+            .slot-time.active {
+                background-color: #f26b3c;
+                color: #fff;
+            }
+    
+            .slot-available {
+                margin-bottom: 0;
+            }
+            .active-slot {
+                background-color: red;
+            }
+            .event-eventdate-label {
+                font-size: large;
+                font-weight: 600;
+            }
+        }
+
+        .slot-qty {
+            margin-bottom: 1.5rem;
+            margin-top: 1.5rem;
+            margin-left: 1rem;
+            display: inline-block;
+            label {
+                display: inline-block;
+                width: 120px;
+            }
+        }
+    // }
+    h3, h5, p {
+        color: #000;
+    }
+}
+.modal-footer {
+    .slots-avail {
+        .avail-box {
+            span {
+                height: 22px;
+                width: 42px;
+                display: flex;
+                margin-right: 5px;
+                border-radius: 2px;
+            }
+            span.not {
+                background: gray;
+            }
+            span.start {
+                background: #49a9a7;
+            }
+            span.partial {
+                background: #f26b3c;
+            }
+            span.booked {
+                background: red;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .product-detail-container {
+        .detail-list {
+            .detail-item {
+                padding: 2rem;
+                .detail-img {
+                    width: 47%;
+                }
+                .detail-content {
+                    width: 48%;
+                }
+            }
+        }
+
+        .related-container {
+            .related-item {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 1rem 0rem;
+                .related-main-img {
+                    width: 30%;
+                    margin: 0;
+                    max-height: 200px;
+                    object-fit: cover;
+                }
+                .related-content {
+                    width: 66%;
+                    padding: 0;
+                    .price {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+        .star-rating {
+            p {
+            width: fit-content;
+            }
+        }
+
+        .related-heading {
+            h2 {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .product-detail-container {
+        .related-container {
+            .related-item {
+                .related-content {
+                    .package-heading {
+                        p.checking {
+                            font-size: 1.75rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .modal-dialog {
+        .modal-content {
+            .modal-body {
+                background: #fff;
+                // .calender {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    // .react-calendar {
+                    //     width: 100%;
+                    // }
+                    // .calender-dates {
+                    //     display: flex;
+                    //     flex-wrap: wrap;
+                    //     justify-content: center;
+                    //     width: 100%;
+                    //     h3 {
+                    //         display: flex;
+                    //         width: 50%;
+                    //     }
+                        .slot-box {
+                            width: 100%;
+                            margin-top: 15px;
+                            .slot-time {
+                                box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+                            }
+                        }
+                    // }
+                // }
+            }
+            .modal-footer {
+                .slots-avail {
+                    .avail-box {
+                        width: 50%;
+                        margin-bottom: 10px;
+                        padding: 0 3px;
+                        p {
+                            font-size: 3.7vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+$color_1: #d10000;
+$color_2: #757575;
+$color_3: white;
+$font-family_1: Arial, Helvetica, sans-serif;
+$background-color_1: #f0f0f0;
+$background-color_2: #e6e6e6;
+
+.react-calendar {
+	width: 350px;
+	max-width: 100%;
+	background: white;
+	border: 1px solid #a0a096;
+	font-family: $font-family_1;
+	line-height: 1.125em;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	* {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		&:before {
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		&:after {
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+	}
+	button {
+		margin: 0;
+		border: 0;
+		outline: none;
+		&:enabled {
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+    button:not(:disabled) {
+        // border-bottom: 1px solid #49a9a7;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            margin: auto;
+            background-color: #49a9a7;
+            height: 3px;
+            width: 85%;
+        }
+    }
+}
+.react-calendar--doubleView {
+	width: 700px;
+	.react-calendar__viewContainer {
+		display: flex;
+		margin: -0.5em;
+		>* {
+			width: 50%;
+			margin: 0.5em;
+		}
+	}
+}
+.react-calendar__navigation {
+	display: flex;
+	height: 44px;
+	margin-bottom: 1em;
+	button {
+		min-width: 44px;
+		background: none;
+		&:disabled {
+			background-color: $background-color_1;
+		}
+		&:enabled {
+			&:hover {
+				background-color: $background-color_2;
+			}
+			&:focus {
+				background-color: $background-color_2;
+			}
+		}
+	}
+
+}
+.react-calendar__month-view__weekdays {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 0.75em;
+}
+.react-calendar__month-view__weekdays__weekday {
+	padding: 0.5em;
+    color: #49a9a7;
+}
+.react-calendar__month-view__weekNumbers {
+	.react-calendar__tile {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 0.75em;
+		font-weight: bold;
+	}
+}
+// .react-calendar__month-view__days__day--weekend {
+// 	color: $color_1;
+// }
+.react-calendar__month-view__days__day--neighboringMonth {
+	color: $color_2;
+}
+.react-calendar__year-view {
+	.react-calendar__tile {
+		padding: 2em 0.5em;
+	}
+}
+.react-calendar__decade-view {
+	.react-calendar__tile {
+		padding: 2em 0.5em;
+	}
+}
+.react-calendar__century-view {
+	.react-calendar__tile {
+		padding: 2em 0.5em;
+	}
+}
+.react-calendar__tile {
+	max-width: 100%;
+	padding: 10px 6.6667px;
+	background: none;
+	text-align: center;
+	line-height: 16px;
+	&:disabled {
+		background-color: $background-color_1;
+	}
+	&:enabled {
+		&:hover {
+			background-color: $background-color_2;
+		}
+		&:focus {
+			background-color: $background-color_2;
+		}
+	}
+}
+.react-calendar__tile--now {
+	background: #ffff76;
+	&:enabled {
+		&:hover {
+			background: #ffffa9;
+		}
+		&:focus {
+			background: #ffffa9;
+		}
+	}
+}
+.react-calendar__tile--hasActive {
+	background: #49a9a7;
+	&:enabled {
+		&:hover {
+			background: #49a9a7;
+		}
+		&:focus {
+			background: #49a9a7;
+		}
+	}
+}
+.react-calendar__tile--active {
+	background: #49a9a7;
+	color: $color_3;
+	&:enabled {
+		&:hover {
+			background: #49a9a7;
+		}
+		&:focus {
+			background: #49a9a7;
+		}
+	}
+}
+.react-calendar--selectRange {
+	.react-calendar__tile--hover {
+		background-color: $background-color_2;
+	}
+}

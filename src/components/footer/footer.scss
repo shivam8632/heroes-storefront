@@ -1,0 +1,101 @@
+footer {
+    .footer-top {
+        background: #2d373c;
+        span {
+            color: #cacaca !important;
+        }
+    }
+
+    .footer-header {
+        padding-top: 10px;
+        font-weight: 800;
+        font-size:x-large;
+        text-align: center;
+        span {
+            color: #cacaca !important;
+        }
+    }
+
+    .footer-main {
+        background: #2d373c;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url(../../assets/img/footer-bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+        }
+        .container {
+            position: relative;
+            margin-top: 0 !important;
+        }
+        .footer-list {
+            margin-top: 0 !important;
+            padding-top: 2rem;
+            .footer-block {
+                h6 {
+                    color: #fff;
+                }
+
+                p {
+                    cursor: pointer;
+                    color: #cacaca;
+                    a {
+                        text-decoration: none;
+                        color: #cacaca;
+
+                    }
+                    svg {
+                        margin-right: 12px;
+                    }
+                }
+                &:nth-child(1) {
+                    h6 {
+                        // display: flex;
+                        flex-direction: column;
+                        justify-content: left;
+                        align-items: left;
+                        img {
+                            width: 80px;
+                            margin-bottom: 15px;
+                        }
+                    }
+                    p {
+                        cursor: initial;
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom {
+        background: #2d373c;
+    }
+   
+}
+
+@media only screen and (min-width: 768px) {
+    footer {
+        .footer-header {
+            font-size:xx-large;
+        }
+
+        .footer-main {
+            .footer-list {
+                .footer-block {
+                    margin-bottom: 0 !important;
+                    &:nth-child(1) {
+                        h6 {
+                            justify-content: flex-start ;
+                            // align-items: flex-start ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

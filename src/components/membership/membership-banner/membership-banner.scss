@@ -1,0 +1,24 @@
+.membership-banner {
+    background-image: url(../../../assets/img/heroes-banner-medium.jpg);
+    min-height: 40vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .heading {
+        position: relative;
+        h2 {
+            font-size: 44px;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .membership-banner {
+        min-height: 38vh;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .membership-banner {
+        min-height: 40vh;
+    }
+}

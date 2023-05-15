@@ -1,0 +1,321 @@
+.pymtsum-container {
+    .pymtsum-main {
+        padding: 2rem 0;
+        .pymtsum-list {
+            display: flex;
+            flex-direction: column;
+            order: 2;
+            margin-bottom: 2rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .pymtsum-det {
+                width: 100%;
+                .pymt-descr {
+                    width: 70%;
+                    float:right
+                }
+                .pymt-item-price {
+                    width: 30%;
+                    float: left;
+                }
+            }
+            .pymtsum-box {
+                padding: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+                p {
+                    margin-bottom: 5px;
+                }
+            }
+            .slot-list {
+                display: flex;
+                flex-direction: column;
+                .slot-container {
+                    display: flex;
+                    p {
+                        color: #000;
+                        font-size: 14px;
+                        width: 50%;
+                        padding: 7px 0;
+                        margin-bottom: 0;
+                        &:nth-child(1) {
+                            padding-right: 10px;
+                            border-right: 1px solid #dadada;
+                        }
+                        &:nth-child(even) {
+                            padding-left: 10px;
+                        }
+                    }
+                    &:first-child {
+                        order: 3;
+                    }
+                    &:nth-child(2) {
+                        order: 2;
+                        color:#fff
+                    }
+                    &:last-child {
+                        border-bottom: none;
+                        padding-bottom: 0;
+                        order: 1;
+                        p{
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+        .pymtsum-total {
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+            margin-top: 2.5rem;
+            // padding: 1.5rem;
+            order: 1;
+            .total-details {
+                .main-total {
+                    border-top: 1px solid #e5e5e5;
+                    text-align: left;
+                }
+                form {
+                    label {
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// @media only screen and (min-width: 768px) {
+//     .pymtsum-container {
+//         .pymtsum-main {
+//             flex-direction: column;
+//             .pymtsum-boxes {
+//                 order: 1;
+//                 width: 55%;
+//             }
+//             .pymtsum-total {
+//                 width: 40%;
+//                 order: 2;
+//                 position: sticky;
+//                 top: 15px;
+//             }
+//         }
+//     }
+// }
+
+@media only screen and (min-width: 992px) {
+    .pymtsum-container {
+        .pymtsum-main {
+            flex-direction: column;
+            padding: 0rem 0;
+            .pymtsum-boxes {
+                box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+                width: 100%;
+                .pymtsum-list {                    
+                    margin-bottom: 0;
+                    .pymtsum-box {
+                        justify-content: space-between;
+                        padding: 1.5rem;
+                        box-shadow: none;
+                        flex-direction: row;
+                        border-bottom: 1px solid #e5e5e5;
+                        .pymtsum-img {
+                            width: 20%;
+                        }
+                        .pymtsum-content {
+                            width: 53%;
+                            margin: 0 10px;
+                        }
+                        .pymtsum-prod-details {
+                            width: fit-content;
+                        }
+                    }
+                    .slot-list {
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-top: 12px;
+                        .slot-container {
+                            width: 100%;
+                            border-bottom: none;
+                            display: flex;
+                            &:first-child {
+                                padding-left: 0;
+                            }
+                            &:last-child {
+                                border-right: none;
+                            }
+                            p.related-heading {
+                                line-height: 1.2;
+                                min-height: 38.8px;
+                                margin-bottom: 3px !important;
+                                font-size: 13px;
+                                text-align: left;
+                            }
+                            p.day {
+                                margin-bottom: 3px !important;
+                                font-size: 13px;
+                            }
+                            p.time {
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+            .pymtsum-total {
+                width: 100%;
+                box-shadow: none;
+                .total-container {
+                    display: flex;
+                    border: 1px solid #000;
+                    border-radius: 3px;
+                    justify-content: flex-end;
+                }
+                .join {
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 1.5rem;
+                    border-right: 1px solid #e5e5e5;
+                    label {
+                        text-align: left;
+                    }
+                    textarea {
+                        height: 100%;
+                        resize: none;
+                    }
+                }
+                .total-details {
+                    // display: flex;
+                    flex-direction: row;
+                    width: 36%;
+                    padding: 1.5rem;
+                    form {
+                        .input-container {
+                            input {
+                                width: 50%;
+                                min-height: 50px;
+                            }
+                            .buttons {
+                                button {
+                                    border-radius: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        .pymtsum-det {
+            justify-content: space-between;
+            padding: 0 1.5rem;
+            width: 100%;
+            .pymt-descr {
+                width: 90%;
+                .item-desc {
+                    width: 70%;
+                }
+            }
+            .pymt-item-price {
+                width: 25%;
+                display: flex;
+                justify-content: space-between;
+                .item-price {
+                    text-align: right;
+                    width: 6vw;
+                }
+                .item-qty {
+                    text-align: right;
+                    width: 3vw;
+                }
+                .item-total {
+                    text-align: right;
+                    width: 4vw;
+                }
+            }
+        }
+    }
+}
+
+// @media only screen and (min-width: 1100px) {
+//     .pymtsum-container {
+//         .pymtsum-det {
+//             .item-desc {
+//                 width: 80%;
+//             }
+//             .item-price {
+//                 width: 8vw;
+//             }
+
+//             .item-qty {
+//                 width: 3vw;
+//             }
+
+//             .item-total {
+//                 width: 8vw;
+//             }
+//         }
+//     }
+// }
+
+// @media only screen and (min-width: 1200px) {
+//     .pymtsum-container {
+//         .pymtsum-main {
+//             .pymtsum-list {
+//                 .pymtsum-box {
+//                     .pymtsum-content {
+//                         .slot-list {
+//                             .slot-container {
+//                                 padding: 0 8px;
+//                                 p.related-heading {
+//                                     margin-bottom: 6px !important;
+//                                     font-size: 18px
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+            
+//         }
+//         .pymtsum-det {
+//             padding: 0 1.5rem;
+//             .item-price {
+//                 width: 7vw;
+//             }
+
+//             .item-total {
+//                 width: 6.5vw;
+//             }
+//         }
+//     }
+// }
+
+// @media only screen and (min-width: 1300px) {
+//     .pymtsum-container {
+//         .pymtsum-det {
+//             .item-price {
+//                 width: 8vw;
+//             }
+
+//             .item-qty {
+//                 width: 3.5vw;
+//             }
+//         }
+//     }
+// }
+
+// @media only screen and (min-width: 1400px) {
+//     .pymtsum-container {
+//         .pymtsum-det {
+//             .item-price {
+//                 width: 6vw;
+//             }
+
+//         }
+//     }
+// }
