@@ -1,0 +1,32 @@
+.privacypolicy {
+    width: 90%; 
+    margin: auto
+}
+
+.ol-alpha {
+    list-style-type: lower-alpha;
+}
+
+.ul-dot {
+    list-style-type: disc;
+}
+
+.li-dot {
+    list-style-type: disc;
+}
+
+ul li {
+    padding-top: 1.5rem;
+}
+
+.red-highlight {
+    color: red;
+    font-weight: 600;
+}
+
+@media only screen and (min-width: 992px) {
+    .privacypolicy {
+        width: 70%;
+        margin: auto;
+    }
+}

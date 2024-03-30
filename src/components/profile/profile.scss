@@ -1,0 +1,142 @@
+.profile-container {
+    background-color: #d56843;
+
+    .profile-main {
+        .profile-main-container {
+            background: #FFF;
+            max-width: 700px;
+            margin: 0 auto;
+            .profile-list {
+                .profile-box {
+                    border-top: 1px solid #e3e3e3;
+                    text-decoration: none;
+                    cursor: pointer;
+                    .profile-img {
+                        display: flex;
+                        height: 20px;
+                        width: 20px;
+                        min-height: 20px;
+                        min-width: 20px;
+                        background: #0d99ff;
+                    }
+                    .profile-content {
+                        h4 {
+                            color: #000;
+                            line-height: 1;
+                        }
+                        p {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    h4.tabs-heading {
+        border-bottom: 1px solid #d9d9d9;
+    }
+
+    .nav-pills {
+        .nav-item {
+            a {
+                color: #000;
+                text-align: left;
+                position: relative;
+                padding-left: 30px;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 9px;
+                    height: 20px;
+                    width: 20px;
+                    background-color: #0d99ff;
+                    border-radius: 3px;
+                }
+            }
+            a.active {
+                background-color: transparent;
+                &::before {
+                    background-color: #d56843;
+                }
+            }
+        }
+    }
+
+    .tab-content {
+        .form-outline {
+            display: flex;
+            flex-direction: column;
+            label {
+                order: 1;
+                text-align: left;
+            }
+            input {
+                order: 2;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    td, th {
+        border: 1px solid #cfcfcf;
+        text-align: center;
+        padding: 8px;
+      }
+      tr{
+        &:nth-child(even) {
+            background-color: #dddddd;
+          }
+      }
+
+      tr.order-det {
+        cursor: pointer;
+      }
+  }
+
+
+@media only screen and (min-width: 768px) {
+    .profile-container {
+        .tab-list {
+            .side-tab {
+                width: 40%;
+                order: 2;
+            }
+            .tab-main {
+                width: 60%;
+                order: 1;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 990px) {
+    .profile-container {
+        .tab-content {
+            h5 {
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .profile-container {
+        .tab-list {
+            .side-tab {
+                width: 30%;
+                flex: unset;
+            }
+            .tab-main {
+                width: 70%;
+            }
+        }
+    }
+}

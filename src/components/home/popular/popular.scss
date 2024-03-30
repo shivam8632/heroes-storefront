@@ -1,0 +1,49 @@
+.popular {
+    margin-top: 1rem;
+    .popular-heading {
+        border-top: 1px solid #b5b5b5;
+        padding-top: 2rem !important;
+        .heading {
+            h5 {
+                text-align: center;
+            }
+        }
+        .buttons {
+            margin-top: 20px;
+            // .button {
+            //     width: fit-content;
+            //     min-width: unset;
+            //     padding: 10px;
+            //     border-radius: 12px;
+            //     font-size: 14px;
+            // }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .popular {
+        .popular-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 2.2rem;
+            padding: 0 10px;
+            .heading {
+                width: 50%;
+                h5 {  
+                    text-align: left;
+                }
+            }
+            .buttons {
+                width: 50%;
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 0;
+                .button {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

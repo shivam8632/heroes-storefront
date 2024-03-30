@@ -1,0 +1,17 @@
+.faqs-header {
+    padding-top: 20px;
+}
+
+.faq-list  {
+    font-size: large;
+    margin: auto;
+    width: 100%;
+    padding-top: 10px;
+    align-content: center;
+}
+
+@media only screen and (min-width: 992px) {
+    .faq-list {
+        width: 70%;   
+    }
+}

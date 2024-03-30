@@ -1,0 +1,25 @@
+.contactus {
+    .contactus-list {
+        .grid-content {
+            margin: auto;
+            padding: 20px 8px 20px 8px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
+            height: 100%;
+            min-height: 220px;
+            .contactus-p-text {
+                padding-top: 10px;
+                font-size: 1.1rem;
+                font-weight: 600
+            }
+            .contactus-p-address {
+                font-size: 0.9rem;
+            }
+            a {
+                color: #707070;
+                text-decoration: none;
+            }
+        }
+    }
+    
+}

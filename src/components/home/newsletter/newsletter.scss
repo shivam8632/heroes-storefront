@@ -1,0 +1,91 @@
+.newsletter {
+    background: linear-gradient(rgba(45,55,60,.8) 100%,rgba(45,55,60,.8) 0),url(../../../assets/img/newsletter-bg.png);
+    background-attachment: fixed;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 70px 0;
+    form {
+        .input-container {
+            display: flex;
+            background-color: #fff;
+            padding: 5px;
+            max-width: 470px;
+            margin: 0 auto;
+            justify-content: space-between;
+            input {
+                width: 50%;
+                border: none;
+                box-shadow: none;
+                outline: none;
+                padding: 0 15px 0 5px;
+            }
+            button {
+                width: 50%;
+                min-width: auto;
+                font-size: 14px;
+                max-width: 180px;
+            }
+        }
+    }
+
+    .achievement-list {
+        margin-top: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        .achievement-box {
+            width: 100%;
+            min-height: 220px;
+            padding: 20px 10px;
+            display: grid;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #f26b3c;
+            border-radius: 3px;
+            font-weight: 600;
+            // margin-bottom: 2rem;
+
+            h3, p {
+                color: #fff;
+            }
+            h3 {
+                margin: 15px 0 0px;
+                font-weight: bold;
+                font-size: 45px;
+            }
+            p {
+                margin-bottom: 0;
+                font-size: 20px;
+                text-align: center;
+            }
+        } 
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .newsletter {
+        .achievement-list {
+            .achievement-box {
+                width: 80%
+            } 
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .newsletter {
+        .achievement-list {
+            .achievement-box {
+                width: 25%;
+                margin-left: 30px;
+                margin-bottom: 0;
+            } 
+        }
+    }
+}

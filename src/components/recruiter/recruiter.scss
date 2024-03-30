@@ -1,0 +1,79 @@
+.recruiter {
+    // background: linear-gradient(90deg, #0000FF 50%, #68BBE3 50%);
+    position: relative;
+    .recruiter-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 120px 15px;
+        h4, p, a {
+            color: #fff;
+            font-family: 'poppins';
+        }
+
+        h4 {
+            font-size: 36px;
+        }
+        img {
+            object-fit: contain;
+            max-height: 500px;
+        }
+        a.recruiter-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            outline: none;
+            box-shadow: none;
+            border: none;
+            background: #fff;
+            border-radius: 40px;
+            padding: 10px 20px;
+            color: #0000FF;
+            text-decoration: none;
+            font-weight: 700;
+            min-width: 280px;
+            transition: .3s ease-in-out;
+            &:hover {
+                background: #000;
+                color: #fff;
+            }
+        }
+    }
+    .recruiter-center-box {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+        width: fit-content;
+        height: fit-content;
+        padding: 50px;
+        border-radius: 5px;
+        color: #0000FF;
+        font-weight: bold;
+        font-family: 'poppins';
+        font-size: 24px;
+    }
+    .recruiter-left {
+        background: #0000FF;
+    }
+    
+    .recruiter-right {
+        background: #68BBE3;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .recruiter {
+        .recruiter-box {
+    
+            h4 {
+                font-size: 28px;
+            }
+        }
+    }
+}

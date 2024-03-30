@@ -1,0 +1,15 @@
+.aboutus {
+    width: 100%;
+    ul {
+        li {
+            text-align: left;
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .aboutus {
+        width: 60%;
+        margin: auto;
+    }
+}

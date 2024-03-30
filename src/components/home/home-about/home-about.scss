@@ -1,0 +1,79 @@
+.home-about {
+    .home-about-list {
+        .home-about-box {
+            background-repeat: no-repeat;
+            max-width: 380px;
+            margin: 0 auto;
+            min-height: 230px;
+            margin-bottom: 3.5rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            h4 {
+                font-size: 18px;
+                width: 190px;
+                text-align: left !important;
+                font-weight: bold;
+            }
+            p {
+                font-size: 14px;
+                width: 190px;
+                color: #000;
+                margin-bottom: 0;
+                padding-bottom: 15px;
+            }
+            &:nth-child(1) {
+                background-image: url(../../../assets/img/curiosity.png);
+                background-position: right;
+                background-size: calc(100% - 80px) 100%;
+            }
+            &:nth-child(2) {
+                background-image: url(../../../assets/img/invited.png);
+                background-position: bottom right;
+                background-size: contain;
+            }
+            &:nth-child(3) {
+                background-image: url(../../../assets/img/learning.png);
+                background-position: top left;
+                background-size: contain;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .home-about {
+        .home-about-list {
+            .home-about-box {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .home-about {
+        .home-about-list {
+            .home-about-box {
+                max-width: 440px;
+                min-height: 260px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                h4 {
+                    font-size: 20px;
+                }
+                p {
+                    font-size: 16px;
+                    width: 220px;
+                }
+                &:nth-child(1) {
+                    background-size: calc(100% - 90px) 100%;
+                }
+            }
+        }
+    }
+}

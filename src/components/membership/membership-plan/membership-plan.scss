@@ -1,0 +1,39 @@
+.membership-plan {
+    background-image: url(../../../assets/img/member-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .sub-plan {
+        h3 {
+            color: #f26b3c;
+            font-size: 40px;
+            font-weight: normal;
+        }
+        h5 {
+            color: #707070;
+            font-size: 26px;
+        }
+
+        // p {
+        //     border-bottom: 1px solid #fff;
+        // }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .membership-plan {
+        .sub-plan {
+            width: 50%;
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .membership-plan {
+        .sub-plan {
+            li {
+                font-size: 16px;
+            }
+        }
+    }
+}

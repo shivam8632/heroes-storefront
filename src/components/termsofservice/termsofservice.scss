@@ -1,0 +1,71 @@
+.termsofservice {
+    .termsofservice-content {
+        display: flex;
+        justify-content: start;
+
+        ol .ol-custom{
+            list-style-type: none;
+            counter-reset: item;
+            margin: 0;
+            padding: 10px;
+            counter-reset: alphabeticList;
+
+            li {                                                         
+                position: relative;
+                margin: 0 0 2em 1em;
+                margin: 0;
+                counter-increment: 
+                alphabeticList;  
+                &:before {
+                content: "("counter(alphabeticList, lower-alpha) ")";
+                margin-right: 1em;
+                font-size: 1em;                 
+                }
+            }
+        }
+
+        ol {
+            
+            list-style-type: none;
+            counter-reset: item;
+            margin: 0;
+            padding: 10px;
+            li:before  {
+                font-weight: 600;
+            }
+        }
+        ol > li {
+            display: table;
+            counter-increment: item;
+            margin-bottom: 0.6em;
+        }
+
+        
+        ol > li:before {
+            content: counters(item, ".");
+            display: table-cell;
+            padding-right: 1.0em;    
+            font-weight: 600;
+        }
+        
+        li ol > li {
+            margin: 0;
+            padding: 14px;
+        }
+        
+        li ol > li:before {
+            content: counters(item, ".") " ";
+            padding-right: 1.0rem
+        }
+    }
+}
+
+
+
+
+  @media only screen and (min-width: 768px) {
+    .termsofservice {
+        width: 70%;
+        display: inline-block;
+    }
+}

@@ -1,0 +1,81 @@
+.destination {
+    margin-top: 3rem;
+    .destination-carousel {
+        margin: 3rem 0;
+        .swiper-wrapper {
+            .swiper-slide {
+                .destination-content {
+                    position: absolute;
+                    inset: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin: auto;
+                    transition: .5s ease-out;
+                    padding: 40px 10px;
+                    
+                    h3, p {
+                        color: #fff;
+                        margin-bottom: 0;
+                    }
+                    .place {
+                        display: flex;
+                        margin: 12px 0;
+                        p {
+                            &:nth-child(1) {
+                                border-right: 3px solid #f26b3c;
+                                padding-right: 7px;
+                                margin-right: 7px;
+                            }
+                        }
+                    }
+                    .stars {
+                        transition: .7s ease-in-out;
+                        svg {
+                            margin: 0 3px;
+                        }
+                    }
+                    &:hover {
+                        background: rgba(45,55,60,.8);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .destination {
+        margin-top: 4rem;
+        .destination-carousel {
+            .swiper-wrapper {
+                .swiper-slide {
+                    .destination-content {
+                        justify-content: flex-end;
+                        transform: translateY(40px);
+                        padding: 50px 10px;
+                        .stars {
+                            height: 0;
+                            opacity: 0;
+                            transition: .7s ease-in-out;
+                        }
+                        &:hover {
+                            justify-content: center;
+                            transform: translateY(0px);
+                            .stars {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1020px) {
+    .destination {
+        margin-top: 5rem;
+    }
+}
